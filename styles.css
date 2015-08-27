@@ -1,8 +1,8 @@
 /*@import url(https://fonts.googleapis.com/css?family=Cardo:400,400italic,700&subset=latin,latin-ext,greek-ext,greek);*/
 
-@font-face { 
+@font-face {
     font-family: LMR;
-    src: url("lmr/lmroman10-regular.otf"); 
+    src: url("lmr/lmroman10-regular.otf");
 }
 @font-face {
     font-family: LMR;
@@ -15,58 +15,90 @@
     src: url("lmr/lmroman10-bold.otf");
     font-weight: bold;
 }
-
+@font-face {
+    font-family: ETBembo;
+    src: url("bembo/ETBembo-RomanLF.ttf");
+}
+@font-face {
+    font-family: ETBembo;
+    src: url("bembo/ETBembo-DisplayItalic.ttf");
+    font-weight: normal;
+    font-style: italic;
+}
 html {
-    font-size: 14pt;
-    font-family: LMR;
-    font-weight:300;
-    line-height: 1.6rem;
+    font-size: 15pt;
+    font-family: ETBembo;
+    font-weight: 300;
+    line-height: 1.75rem;
     background-color: #f7f7f7;
     color: #111;
 }
-
+.button {
+    border: 1pt solid #bfbdbd;
+    border:none;
+    color: #838383;
+    border-radius: 20px;
+    box-shadow: none;
+    background: none;
+    font-size: 30pt;
+    font-weight: 800;
+    cursor:pointer;
+/*    border: 1pt solid black;*/
+/*    line-height: 3rem;*/
+}
 body {
-    padding:0;
-    margin:0;
-}
-.navbar {
-    position:fixed;
-    height: 30px;
-    width: 100%;
-    background: #011550;
-    opacity: 0.95;
-    margin-top:0;
-    display:block;
-    padding: 10px;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
 }
 
+#container {
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+
+.slide {
+    transform: translateX(30%); 
+}
+#menuBtn.slide {
+    transform: translateX(80%) rotate(-90deg);
+}
+
+#sidebar.slide{
+   transform: translateX(117%);
+}
+
+.navbar {
+    position: fixed;
+    margin-top: 0;
+    display: block;
+    right: 92%;
+    top: 40px;
+    line-height:0px;
+}
 #sidebar {
     width: 25%;
-    position:fixed;
-    top: 0;
+    min-width:300px;
     padding: 2.5%;
-    left: -40%;
+    right: 101%;
+    opacity: 0.95;
     background: #011550;
-    color:white;
-    top:45px;
-    transition: left 0.5s;
+    color: white;
+    top: 85px;
+    transition: transform 0.5s;
     box-shadow: 1px 1px 5px #2c2c2c;
-    height: 100%;
-    
-    
+    height: 70%;
+    position: fixed;
+    z-index:2;
 }
-
 #sidebar.visible {
-    left:0;
+    left: 0;
 }
-
-
 .main-content {
     width: 100%;
     padding-top: 60px;
-    
 }
-
 .post-date {
     padding-bottom: 1rem;
     margin-left: 5%;
@@ -76,66 +108,112 @@ body {
     font-size: 0.8rem;
 }
 .post-byline {
-    float:right;
-    padding-top:1rem;
+    float: right;
+    padding-top: 1rem;
     padding-bottom: 1rem;
-    width: 25%; 
-    clear:right;
-
+    width: 25%;
+    clear: right;
 }
-
 .author {
-    height:48px;
-    margin-bottom:1rem;
-    
+    height: 48px;
+    margin-bottom: 1rem;
 }
 .post {
-    width: 65%;
-    margin-left:5%;
-    
+    width: 50%;
+    margin-left: 12%;
 }
 
+#menuBtn {
+    transition: transform 0.5s;
+    margin-left: 10px;
+    font-size: 50pt;
+    font-weight: 800;
+}
+
+.rotate {
+    transform: rotate(-90deg);
+
+}
 .avatar {
     width: 20%;
-    background:url(https://storage.googleapis.com/assets.johanpaul.net/images/Baboon_Wikimedia.jpg) no-repeat;
-  height:48px;
-  width:48px;
-  border-radius:50%;
-  overflow:hidden;
-  margin:auto;
-float:left;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    float: left;
 }
-
-.author-name{
-    margin-left:5%;
+.author-name {
+    margin-left: 5%;
     position: relative;
-    top:25%;
+    top: 25%;
 }
-
 img {
-    mix-blend-mode: multiply;
+/*    mix-blend-mode: multiply;*/
     width: 100%;
 }
-
 figcaption {
     width: 100%;
     text-align: center;
     font-size: 0.8rem;
     font-weight: bold;
-    
 }
-
-h1, h2, h3 {
-    font-style:italic;
+h2,
+h3 {
+    font-style: italic;
+    font-weight: 200;
 }
-
-h1{
-    padding-left:5%;
-    padding-right:5%;
-    line-height: 2rem;
+h1 {
+    padding-left: 12%;
+    padding-right: 5%;
+    line-height: 3rem;
     padding-bottom: 2rem;
+    font-size: 3.2rem;
+    font-weight: 400;
 }
 pre>code {
     font-size: 0.8rem;
     line-height: 1.4rem;
+}
+
+/*BookTabs-like tables...fron https://github.com/daveliepmann/tufte-css*/
+
+table.booktabs {
+    width: auto;
+    margin: 0 auto;
+    border-spacing: 0px;
+    border-top: 2px solid #333333;
+    border-bottom: 2px solid #333333;
+}
+.booktabs th {
+    border-bottom: 1px solid #333333;
+    padding: 0.65ex 0.5em 0.4ex 0.5em;
+    font-weight: normal;
+    text-align: center;
+}
+.booktabs th.cmid {
+    border-bottom: 1px solid #666666;
+}
+.booktabs th.nocmid {
+    border-bottom: none;
+}
+.booktabs tbody tr:first-child td {
+    padding-top: 0.65ex;
+}
+
+/* add space between thead row and tbody */
+
+.booktabs td {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: left;
+}
+.booktabs caption {
+    font-size: 90%;
+    text-align: left;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1ex;
+    caption-side: top;
 }
