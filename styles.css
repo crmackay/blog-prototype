@@ -60,13 +60,16 @@ body {
 
 .slide {
     transform: translateX(30%); 
+    -webkit-transform: translateX(30%);
 }
 #menuBtn.slide {
+    -webkit-transform: translateX(80%) rotate(-90deg);
     transform: translateX(80%) rotate(-90deg);
 }
 
 #sidebar.slide{
-   transform: translateX(117%);
+   -webkit-transform: translateX(117%);
+    transform: translateX(117%);
 }
 
 .navbar {
@@ -131,6 +134,7 @@ body {
 }
 
 .rotate {
+    -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
 
 }
