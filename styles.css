@@ -26,10 +26,10 @@
     font-style: italic;
 }
 html {
-    font-size: 14pt;
+    font-size: 15pt;
     font-family: ETBembo;
     font-weight: 300;
-    line-height: 1.7rem;
+    line-height: 1.75rem;
     background-color: #f7f7f7;
     color: #111;
 }
@@ -73,7 +73,6 @@ body {
     position: fixed;
     margin-top: 0;
     display: block;
-/*    padding: 10px;*/
     right: 92%;
     top: 40px;
     line-height:0px;
@@ -83,6 +82,7 @@ body {
     min-width:300px;
     padding: 2.5%;
     right: 101%;
+    opacity: 0.95;
     background: #011550;
     color: white;
     top: 85px;
@@ -90,6 +90,7 @@ body {
     box-shadow: 1px 1px 5px #2c2c2c;
     height: 70%;
     position: fixed;
+    z-index:2;
 }
 #sidebar.visible {
     left: 0;
