@@ -89,8 +89,7 @@ body {
     background: #011550;
     color: white;
     top: 85px;
-    transition: transform 0.5s;
-    transition: -webkit-transform 0.5s;
+    transition: 0.5s;
     box-shadow: 1px 1px 5px #2c2c2c;
     height: 70%;
     position: fixed;
@@ -128,8 +127,7 @@ body {
 }
 
 #menuBtn {
-    transition: transform 0.5s;
-    transition: -webkit-transform 0.5s;
+    transition: 0.5s;
     margin-left: 10px;
     font-size: 50pt;
     font-weight: 800;
