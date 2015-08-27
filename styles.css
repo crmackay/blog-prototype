@@ -83,7 +83,7 @@ body {
 }
 #sidebar {
     width: 25%;
-    min-width:300px;
+    min-width:240px;
     padding: 2.5%;
     right: 101%;
     opacity: 0.95;
