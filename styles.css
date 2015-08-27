@@ -55,6 +55,7 @@ body {
 #container {
     overflow-x: hidden;
     transition: 0.5s;
+    -webkit-transition: 0.5s;
 }
 
 
@@ -90,6 +91,7 @@ body {
     color: white;
     top: 85px;
     transition: 0.5s;
+    -webkit-transition: 0.5s;
     box-shadow: 1px 1px 5px #2c2c2c;
     height: 70%;
     position: fixed;
