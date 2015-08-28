@@ -1,5 +1,6 @@
 /*@import url(https://fonts.googleapis.com/css?family=Cardo:400,400italic,700&subset=latin,latin-ext,greek-ext,greek);*/
 
+
 /* 
 @font-face {
     font-family: LMR;
@@ -17,6 +18,7 @@
     font-weight: bold;
 }
  */
+
 @font-face {
     font-family: ETBembo;
     src: url("bembo/ETBembo-RomanLF.ttf");
@@ -35,82 +37,54 @@ html {
     background-color: #f7f7f7;
     color: #111;
 }
-
 @font-face {
-      font-family: 'font-awesome';
-      src: url('font/font-awesome.eot?31078058');
-      src: url('font/font-awesome.eot?31078058#iefix') format('embedded-opentype'),
-           url('font/font-awesome.woff?31078058') format('woff'),
-           url('font/font-awesome.ttf?31078058') format('truetype'),
-           url('font/font-awesome.svg?31078058#font-awesome') format('svg');
-      font-weight: normal;
-      font-style: normal;
-    }
-
+    font-family: 'font-awesome';
+    src: url('font/font-awesome.eot?31078058');
+    src: url('font/font-awesome.eot?31078058#iefix') format('embedded-opentype'), url('font/font-awesome.woff?31078058') format('woff'), url('font/font-awesome.ttf?31078058') format('truetype'), url('font/font-awesome.svg?31078058#font-awesome') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
 }
-
 #menuBtn {
     transition: 0.5s;
     -webkit-transition: 0.5s;
     font-size: 3rem;
-    color: #aaa7a7;
+    color: #c3c3c3;
     position: fixed;
     margin-top: 0;
     display: block;
-    top: 25px;
-    left: 5%;
-    
-     font-family: "font-awesome";
-      font-style: normal;
-      font-weight: normal;
-      speak: none;
-     
-      display: inline-block;
-      text-decoration: inherit;
-      margin-right: .2em;
-      text-align: center;
-      /* opacity: .8; */
-     
-      /* For safety - reset parent styles, that can break glyph codes*/
-      font-variant: normal;
-      text-transform: none;
-     
-      /* fix buttons height, for twitter bootstrap */
-      line-height: 1em;
-     
-      /* Animation center compensation - margins should be symmetric */
-/*    margin-left: .2em;*/
-      /* remove if not needed */
-     
-      /* You can be more comfortable with increased icons size */
-      /* font-size: 120%; */
-     
-      /* Font smoothing. That was taken from TWBS */
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+    top: 5vh;
+    left: 4%;
+    /*    text-shadow: 1px 1px 2px #8e8e8e;*/
+    font-family: "font-awesome";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    /* Animation center compensation - margins should be symmetric */
+    /*    margin-left: .2em;*/
+    /* remove if not needed */
+    /* You can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     cursor: pointer;
-    
-    
+    z-index: 3;
 }
-#test {
-    border: 1pt solid black;
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-    font-size: 50pt;
-    font-weight: 800;
-    color: grey;
-    position: fixed;
-    margin-top: 0;
-    display: block;
-    left: 3%;
-    top: 40px;
-/*    line-height:0px;*/
-}
-
 .rotate {
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
@@ -120,36 +94,33 @@ body {
     transition: 0.5s;
     -webkit-transition: 0.5s;
 }
-
 .slide {
-    transform: translateX(30%); 
+    transform: translateX(30%);
     -webkit-transform: translateX(30%);
 }
 #menuBtn.slide {
     transform: translateX(500%) rotate(-90deg);
     -webkit-transform: translateX(400%) rotate(-90deg);
 }
-
-#sidebar.slide{
-   transform: translateX(117%);
-    -webkit-transform: translateX(117%); 
+#sidebar.slide {
+    transform: translateX(117%);
+    -webkit-transform: translateX(117%);
 }
-
 #sidebar {
     width: 25%;
-    min-width:240px;
+    min-width: 240px;
     padding: 2.5%;
     right: 101%;
     opacity: 0.95;
     background: #011550;
     color: white;
-    top: 85px;
+    top: 17vh;
     transition: 0.5s;
     -webkit-transition: 0.5s;
     box-shadow: 1px 1px 5px #2c2c2c;
-    height: 70%;
+    height: 65vh;
     position: fixed;
-    z-index:2;
+    z-index: 2;
 }
 #sidebar.visible {
     left: 0;
@@ -181,7 +152,6 @@ body {
     width: 50%;
     margin-left: 12%;
 }
-
 .avatar {
     width: 20%;
     height: 48px;
@@ -197,7 +167,7 @@ body {
     top: 25%;
 }
 img {
-/*    mix-blend-mode: multiply;*/
+    /*    mix-blend-mode: multiply;*/
     width: 100%;
 }
 figcaption {
@@ -206,12 +176,11 @@ figcaption {
     font-size: 0.8rem;
     font-weight: bold;
 }
-
-h2, h3 {
+h2,
+h3 {
     font-style: italic;
     font-weight: 200;
 }
-
 h1 {
     padding-left: 12%;
     padding-right: 5%;
@@ -266,26 +235,37 @@ table.booktabs {
     margin-top: 1ex;
     caption-side: top;
 }
-
 @media screen and (max-width: 720px) {
-
     .main-content {
-        padding-top:0;
+        padding-top: 0;
     }
     h1 {
-        margin-top: 1.5rem;   
+        margin-top: 1.5rem;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
     }
-    
-    .post-date, .post-byline {
-        float:none;
+    .post-date,
+    .post-byline {
+        float: none;
         display: block;
         width: 80%;
-        margin-left: 12%;
-    
-    
-    
+        margin-left: 18%;
+    }
+    .post-byline {
+        text-size: 0.8rem;
+    }
+    img.avatar {
+        height: 40px;
+        width: 40px;
+    }
+    .author {
+        margin-bottom: 0.5rem;
     }
     .post {
-        width:80%;
+        width: 82%;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
     }
 }
